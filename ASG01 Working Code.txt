@@ -1,0 +1,26 @@
+/*this program is for ASG01 of ITSE 2321
+It creates a world object, populates it with a picture,
+creates 2 turtle objects, then moves then around
+while manipulating their pens
+Author: Silver Bowen*/
+
+//import neccesaries
+import java.awt.Color;
+
+//define main class
+//visibility = public (can be called from anywhere)
+//accessor = Proj01Runner
+public class Proj01Runner{
+  //define main
+  //does not have to be instantiated as object to call = static
+  //returns no value = void
+  //name of function = main :)
+  //(string[] args) creates a string that holds command line arguments
+  public static void main(String[] args){
+    // call new Proj01 01
+    //1st Proj01 = object type
+    //mFJO = reference to object (myFirstJavaObject)
+    //new = instantiate a new object from this class
+    //Proj01() class to instantiate from
+    Proj01 mFJO = new Proj01();
+    
