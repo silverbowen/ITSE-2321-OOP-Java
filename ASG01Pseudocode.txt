@@ -25,3 +25,5 @@ and a loop (for?)
 Gimp is good place to start for tool to
 compare my output w/ Baldwin's + get
 initial idea of coordinates and colors
+
+Gimp didn't work out :(
