@@ -1,1 +1,27 @@
-Final test
+ASG01 Psuedocode
+
+import the needed libraries
+
+declare a main class
+
+in that class:
+
+create a world mars
+populate the world with a picture
+put my name in world
+create a turtle joe
+set the color and pen of joe
+create a turtle sue
+set color and pen of sue
+move joe to create line, then circle, varying pen color
+move sue to create line, varying pen visibility
+  
+notes: 
+
+making a circle will require equations for
+circles in a cartesian coordinate system
+and a loop (for?)
+
+Gimp is good place to start for tool to
+compare my output w/ Baldwin's + get
+initial idea of coordinates and colors
