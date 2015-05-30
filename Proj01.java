@@ -27,11 +27,17 @@ public class Proj01{
 //define Proj01Runner
 //visibility = public (can be called from anywhere)
 class Proj01Runner{
+
+  //define reusable variables (allows for easier change later)
+  int WIDTH = 395;
+  int HEIGHT = 295;
+  int RADIUS = 90;
+  
+  //world will be 394 x 295, as per spec
   //instantiate world and turtle objects
   //private because only used inside this class
   //names mars, joe, sue as per spec
-  private World mars = new World(394,295);
-  //world is 394 x 295, as per spec
+  private World mars = new World(WIDTH,HEIGHT);
   private Turtle joe = new Turtle(mars);
   private Turtle sue = new Turtle(mars);
   
@@ -56,27 +62,57 @@ class Proj01Runner{
     //replace default (white) with required pic
     mars.setPicture(new Picture("Proj01.jpg"));
     mars.getPicture().addMessage("William Bowen",10,20);
+
     
+    //center is 197, 147
+
     //Manipulate the turtle named joe.
     joe.setName("joe");
-    joe.setBodyColor(Color.RED);
-    joe.setShellColor(Color.BLUE);
+      
+    joe.setBodyColor(Color.YELLOW);
+    joe.setShellColor(Color.RED);
+    
     joe.setPenColor(Color.YELLOW);
     joe.setPenWidth(3);
-    joe.turn(180);
-    joe.forward();
-    joe.turn(-135);
-    joe.setPenColor(Color.BLUE);
-    joe.forward(150);
+    
+    joe.forward(90);
+    
+    joe.setPenColor(Color.RED);
+    joe.setPenWidth(1);
+          
+    for(int ang = 270;ang > 180;ang -= 1){
+      double angle = Math.toRadians(ang);
+      int x = WIDTH/2 + (int)(Math.cos(angle)*RADIUS);
+      int y = HEIGHT/2 + (int)(Math.sin(angle)*RADIUS);
+
+      joe.moveTo(x,y);
+    }
+    
+    joe.setPenColor(Color.GREEN);
+    joe.setPenWidth(3);
+    
+    for(int ang = 179;ang > 89;ang -= 1){
+      double radius = Math.toRadians(ang);
+      int x = WIDTH/2 + (int)(Math.cos(radius)*RADIUS);
+      int y = HEIGHT/2 + (int)(Math.sin(radius)*RADIUS);
+
+      joe.moveTo(x,y);
+    }
+    
+    joe.turn(90);
 
     //Manipulate the turtle named sue
     sue.setName("sue");
-    sue.setPenWidth(5);
-    sue.setPenColor(Color.RED);
-    sue.moveTo(300-183,274-170);
+      
+    sue.setPenWidth(2);
+    sue.setPenColor(Color.BLUE);
+    
+    sue.moveTo(237,187);
     sue.setPenDown(false);
-    sue.moveTo(300-216,274-203);
+    
+    sue.moveTo(277,227);
     sue.setPenDown(true);
-    sue.moveTo(300-250,274-237);
+    
+    sue.moveTo(317,267);
   }
 }
