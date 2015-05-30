@@ -59,7 +59,7 @@ public class Proj01Runner{
     joe.setPenWidth(3);
     
     joe.forward(90);
-    
+        
     joe.setPenColor(Color.RED);
     joe.setPenWidth(1);
     
