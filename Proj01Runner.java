@@ -4,29 +4,11 @@ creates 2 turtle objects, then moves then around
 while manipulating their pens
 Author: Silver Bowen*/
 
-//34567890123456789012345678901234567890123456789012345678
-/*File Proj01 Copyright 2010 R.G.Baldwin
-*********************************************************/
 import java.awt.Color;
-
-public class Proj01{
-  //DO NOT MODIFY THE CODE IN THIS CLASS DEFINITION.
-  public static void main(String[] args){
-    Proj01Runner obj = new Proj01Runner();
-    obj.run();
-
-    System.out.println(obj.getMars());
-    System.out.println(obj.getJoe());
-    System.out.println(obj.getSue());
-  }//end main
-}//end class Proj01
-//End program specifications.
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
 
 //define Proj01Runner
 //visibility = public (can be called from anywhere)
-class Proj01Runner{
+public class Proj01Runner{
 
   //define reusable variables (allows for easier change later)
   int WIDTH = 395;
@@ -44,7 +26,7 @@ class Proj01Runner{
   //this is a constructor
   //it automatically provides the given value
   //when an object of this class is instantiated
-  //in this case, printing my name
+  //(in this case, printing my name)
   public Proj01Runner(){
     System.out.println("William Bowen");
   }
@@ -52,6 +34,7 @@ class Proj01Runner{
   //define accessor methods -
   //these are the methods Proj01 main
   //calls to get the text output
+  //via overidden toString
   public Turtle getJoe(){return joe;}
   public Turtle getSue(){return sue;}
   public World getMars(){return mars;}
@@ -79,11 +62,15 @@ class Proj01Runner{
     
     joe.setPenColor(Color.RED);
     joe.setPenWidth(1);
-          
-    for(int ang = 270;ang > 180;ang -= 1){
+    
+    joe.moveTo(191, 57);
+    joe.moveTo(190, 58);
+    joe.moveTo(183, 58);
+               
+    for(int ang = 260;ang > 180;ang -= 1){
       double angle = Math.toRadians(ang);
-      int x = WIDTH/2 + (int)(Math.cos(angle)*RADIUS);
-      int y = HEIGHT/2 + (int)(Math.sin(angle)*RADIUS);
+      int x = 197 + (int)(Math.cos(angle)*RADIUS);
+      int y = 147 + (int)(Math.sin(angle)*RADIUS);
 
       joe.moveTo(x,y);
     }
@@ -91,14 +78,15 @@ class Proj01Runner{
     joe.setPenColor(Color.GREEN);
     joe.setPenWidth(3);
     
-    for(int ang = 179;ang > 89;ang -= 1){
+    for(int ang = 179;ang > 97;ang -= 1){
       double radius = Math.toRadians(ang);
-      int x = WIDTH/2 + (int)(Math.cos(radius)*RADIUS);
-      int y = HEIGHT/2 + (int)(Math.sin(radius)*RADIUS);
+      int x = 197 + (int)(Math.cos(radius)*RADIUS);
+      int y = 147 + (int)(Math.sin(radius)*RADIUS);
 
       joe.moveTo(x,y);
     }
     
+    joe.moveTo(197,237);
     joe.turn(90);
 
     //Manipulate the turtle named sue
