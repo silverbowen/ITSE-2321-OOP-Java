@@ -1,7 +1,7 @@
-/* Import Java.io.* for Serializable and
+/* Import Java.io.Serializable and
  * Java.util.* for a ton of stuff.
  */
-import java.io.*;
+import java.io.Serializable;
 import java.util.*;
 
 /** Define Proj10Runner class. It returns our 
